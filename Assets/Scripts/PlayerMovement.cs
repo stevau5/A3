@@ -45,12 +45,12 @@ public class PlayerMovement : MonoBehaviour
 
         controller.Move(velocity * Time.deltaTime);
 
-
-        calculateScreenRedness(this.air);
         stablelizeVelocity();
         checkJump(jumpVelocity);
         checkOutOfMap();
         checkIfDead();
+
+        this.air -= 0.05f; 
 
     }
     void checkOutOfMap()

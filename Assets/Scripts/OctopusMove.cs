@@ -7,7 +7,10 @@ public class OctopusMove : MonoBehaviour
     float timeCounter = 0;
     float speed;
     float width;
-    float height; 
+    float height;
+    public GameObject spikes;
+
+    int counter;
 
 
     // Start is called before the first frame update
@@ -15,7 +18,8 @@ public class OctopusMove : MonoBehaviour
     {
         speed = 5f;
         width = 15;
-        height = 15; 
+        height = 15;
+        counter = 0; 
     }
 
     // Update is called once per frame
@@ -27,5 +31,14 @@ public class OctopusMove : MonoBehaviour
         float z = Mathf.Sin(timeCounter) * height;
 
         transform.position = new Vector3(x, y, z);
+
+        if(counter == 0)
+        {
+            Instantiate(spikes, new Vector3(x, y, z), Quaternion.identity);
+            counter++;
+        }
+
+
+
     }
 }

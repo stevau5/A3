@@ -52,9 +52,20 @@ public class CollisionDetection : MonoBehaviour
 
         }
 
-        if (collision.collider.tag == "Scoins" && !player.GetComponent<PlayerMovement>().hasGold)
+        if (collision.collider.tag == "s" && !player.GetComponent<PlayerMovement>().hasGold)
         {
             Debug.Log("Small Gold");
+            player.GetComponent<PlayerMovement>().currentGold += 1;
+            player.GetComponent<PlayerMovement>().hasGold = true;
+            player.GetComponent<PlayerMovement>().jumpVelocity = 18;
+            player.GetComponent<PlayerMovement>().movementSpeed = 25f;
+
+
+        }
+
+        if (collision.collider.tag == "Scoins" && !player.GetComponent<PlayerMovement>().hasGold)
+        {
+            Debug.Log("Medium Gold");
             player.GetComponent<PlayerMovement>().currentGold += 2;
             player.GetComponent<PlayerMovement>().hasGold = true;
             player.GetComponent<PlayerMovement>().jumpVelocity = 15;

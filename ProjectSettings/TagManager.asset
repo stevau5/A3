@@ -8,6 +8,7 @@ TagManager:
   - Octopus
   - Bcoins
   - Scoins
+  - s
   layers:
   - Default
   - TransparentFX
