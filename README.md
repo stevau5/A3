@@ -1,1 +1,1 @@
-# A3 - 3D Assignmetn for Comp 376
+# A3 - 3D Assignment for Comp 376
