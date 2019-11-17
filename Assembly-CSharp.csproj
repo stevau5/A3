@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\CollisionDetection.cs" />
     <Compile Include="Assets\Scripts\CurrentGoldText.cs" />
     <Compile Include="Assets\Scripts\HealthMonitor.cs" />
+    <Compile Include="Assets\Scripts\MenuSystem.cs" />
     <Compile Include="Assets\Scripts\MouseLook.cs" />
     <Compile Include="Assets\Scripts\OctopusMove.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />

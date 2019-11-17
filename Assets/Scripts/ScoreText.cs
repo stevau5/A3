@@ -12,5 +12,6 @@ public class ScoreText : MonoBehaviour
     void Update()
     {
         score_text.text = "Score: " + player.GetComponent<PlayerMovement>().currentScore;
+
     }
 }

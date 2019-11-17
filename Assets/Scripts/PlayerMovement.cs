@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.UI; 
+using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -50,7 +51,13 @@ public class PlayerMovement : MonoBehaviour
         checkOutOfMap();
         checkIfDead();
 
-        this.air -= 0.05f; 
+        this.air -= 0.05f;
+
+
+        if (Input.GetButtonDown("Cancel"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
 
     }
     void checkOutOfMap()
@@ -102,8 +109,9 @@ public class PlayerMovement : MonoBehaviour
     {
         if(air < 0)
         {
-            Debug.Log("Oh Dear, You Are Dead");
+            Debug.Log("Oh Dear, You Are Dead. Click ESC for Menu");
         }
     }
+
 
 }

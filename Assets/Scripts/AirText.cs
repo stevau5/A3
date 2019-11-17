@@ -12,5 +12,10 @@ public class AirText : MonoBehaviour
     void Update()
     {
         airText.text = "Air: " + player.GetComponent<PlayerMovement>().air;
+        if(player.GetComponent<PlayerMovement>().air < 0.0f)
+        {
+            airText.text = "DEAD";
+
+        }
     }
 }
